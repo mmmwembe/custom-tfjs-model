@@ -8,10 +8,17 @@ The labels are in LABELS.js
 
 Tried changeing the detect.js script in Juande's tutorial https://github.com/juandes/tensorflowjs-objectdetection-tutorial
 
-changed
+changed the line below:
+```
       const loadlModelPromise = cocoSsd.load();
-to: 
-      const  loadModelPromise = tf.loadGraphModel('http://localhost:8000/custom-tfjs-model/model.json')  
+```
 
+to: 
+```
+      const  loadModelPromise = tf.loadGraphModel('http://localhost:8000/custom-tfjs-model/model.json')  
+```
 However this doesn't work...even when I import
+```
   import * as tf from '@tensorflow/tfjs';
+  
+```
